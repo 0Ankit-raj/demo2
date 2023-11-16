@@ -2,11 +2,11 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Textar from "./components/Textar";
 import React,{useState} from 'react'
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Route,
+//   Routes,
+// } from "react-router-dom";
 function App() {
   const[mode,setMode]=useState('light')
   const togglemode = () =>{
@@ -23,20 +23,17 @@ function App() {
   }
   return (
     <>
-    <BrowserRouter>
-    <Navbar title = "TextVerse" x = "About" mode = {mode} togglemode = {togglemode} />
+    {/* <BrowserRouter> */}
+    <Navbar title = "TextVerse" mode = {mode} togglemode = {togglemode} />
     <div className="container">
-    <Routes>
-    <Route path="/" element={<Textar mode = {mode} />}/> 
-		<Route path="/about" element={<Navbar title = "TextVerse" x = "About" mode = {mode} togglemode = {togglemode} />}/> 
-	  </Routes>
+    {/* <Routes> */}
+    {/* <Route path="/" element={<Textar mode = {mode} />}/>  */}
+		{/* <Route path="/about" element={<Navbar title = "TextVerse" x = "About" mode = {mode} togglemode = {togglemode} />}/>  */}
+	  {/* </Routes> */}
+    <Textar mode = {mode} />
     </div>
-    </BrowserRouter>
+    {/* </BrowserRouter> */}
     </>
   );
 }
 export default App;
-
-
-	
-
